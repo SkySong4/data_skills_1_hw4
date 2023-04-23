@@ -128,10 +128,10 @@ print(smallpopchange_states)
 # POPCHANGE.
 
 # Calculate SD of the population change
-popchange_sd = state_data["POPCHANGE"].sd()
+popchange_std = state_data["POPCHANGE"].std()
 
 # only include states with a population change greater than one standard deviation
-largepopchange_states = state_data[state_data["POPCHANGE"].abs() > popchange_sd]
+largepopchange_states = state_data[state_data["POPCHANGE"].abs() > popchange_std]
 
 # Sort by descending order of the magnitude of POPCHANGE
 largepopchange_states = largepopchange_states.sort_values("POPCHANGE", key=lambda x: x.abs(), ascending=False)
