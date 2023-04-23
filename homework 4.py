@@ -2,8 +2,8 @@
 # Spring 2023
 # Homework 4
 
-# YOUR NAME HERE
-# YOUR GITHUB USER NAME HERE
+# Tianhua Song
+# SkySong4
 
 # Due date: Sunday April 23rd before midnight
 # Write your answers in the space between the questions, and commit/push only
@@ -26,6 +26,17 @@
 # an absolute path using the Python os library to join filenames, so that
 # anyone who clones your homework repo only needs to update one for all
 # loading to work.
+
+import pandas as pd
+import os
+
+# specify the absolute path to the csv file
+data_dir = '/path/to/your/directory'
+filename = 'nst-est2022-alldata.csv'
+abs_path = os.path.join(data_dir, filename)
+
+# load the csv file into a pandas dataframe
+df = pd.read_csv(abs_path)
 
 
 # Question 2: Your data only includes fips codes for states.  Use the us
